@@ -18,3 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+/*
+ * Manage Oauth Clients and Personal Access Tokens
+ * */
+
+Route::get('/admin/oauth', function () {
+    return view('admin.oauth.index');
+})->middleware('auth');
