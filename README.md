@@ -1,10 +1,10 @@
-#Laravel API Base
+# Laravel API Base
 
-##About
+## About
 
 Laravel API Base allows you to jump start your API development quickly, without time consuming installation and setup proces.
 
-##Features
+## Features
 
 * Manage Laravel Passport clients page
   https://laravel-base-api.test/admin/oauth
@@ -12,7 +12,7 @@ Laravel API Base allows you to jump start your API development quickly, without 
 https://laravel-base-api.test/admin/logviewer
 * All HTTP request data automatically log using Spatie HTTP Logger
 
-##Packages included
+## Packages included
 
 * Laravel Passport
 https://laravel.com/docs/5.6/passport
