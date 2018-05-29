@@ -14,6 +14,8 @@ Laravel API Base allows you to jump start your API development quickly, without 
 * LogViewer
 https://laravel-base-api.test/admin/logviewer
 * All HTTP request data automatically log using Spatie HTTP Logger and can be view from LogViewer
+* Dedicated query string filtering class
+https://laracasts.com/series/eloquent-techniques/episodes/4
 * Easy user verification (user register and confirm via email) using Jrean Laravel User Verification
 
 ## Packages included
@@ -44,3 +46,51 @@ https://github.com/jrean/laravel-user-verification
 * copy specific config from .env.example into .env file
 * php artisan migrate
 * enjoy!
+
+## How to
+
+### Dedicated query string filtering class
+
+```
+<?php
+
+namespace App\Http\Filters;
+
+use Illuminate\Database\Eloquent\Builder;
+
+class UserFilters extends QueryFilters
+{
+    /**
+     * Filter by latest.
+     *
+     * @param  string $order
+     * @return Builder
+     */
+    public function latest($order = 'desc')
+    {
+        return $this->builder->orderBy('created_at', $order);
+    }
+
+    /**
+     * Filter by email.
+     *
+     * @param  string $email
+     * @return Builder
+     */
+    public function email($email)
+    {
+        return $this->builder->where('email', $email);
+    }
+
+    /**
+     * Filter by name.
+     *
+     * @param  string $name
+     * @return Builder
+     */
+    public function name($name)
+    {
+        return $this->builder->where('name', 'like', "%$name%");
+    }
+}
+```
