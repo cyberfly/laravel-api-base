@@ -94,3 +94,20 @@ class UserFilters extends QueryFilters
     }
 }
 ```
+
+## TODO
+
+* Spatie Laravel Permission
+https://github.com/spatie/laravel-permission
+* Spatie Laravel Medialibrary
+https://github.com/spatie/laravel-medialibrary
+* Spatie Laravel Sluggable
+https://github.com/spatie/laravel-sluggable
+* Spatie Laravel Tags
+https://github.com/spatie/laravel-tags
+* Owen-It Laravel Auditing
+http://www.laravel-auditing.com/
+* Rutorika Sortable
+https://github.com/boxfrommars/rutorika-sortable
+* Eduardokum Laravel Mail Auto Embed
+https://github.com/eduardokum/laravel-mail-auto-embed
