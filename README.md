@@ -28,3 +28,13 @@ https://github.com/barryvdh/laravel-cors
 https://github.com/spatie/laravel-http-logger
 * Arcanedev Log Viewer
 https://github.com/ARCANEDEV/LogViewer
+
+## Installation
+
+* git clone git@srv.nazrol.tech:internal/laravel-api-base.git
+* composer install
+* php artisan key:generate
+* update your database config at .env file
+* copy specific config from .env.example into .env file
+* php artisan migrate
+* enjoy!
