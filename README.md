@@ -13,6 +13,7 @@ Laravel API Base allows you to jump start your API development quickly, without 
 * LogViewer
 https://laravel-base-api.test/admin/logviewer
 * All HTTP request data automatically log using Spatie HTTP Logger and can be view from LogViewer
+* Easy user verification (user register and confirm via email) using Jrean Laravel User Verification
 
 ## Packages included
 
@@ -28,6 +29,8 @@ https://github.com/barryvdh/laravel-cors
 https://github.com/spatie/laravel-http-logger
 * Arcanedev Log Viewer
 https://github.com/ARCANEDEV/LogViewer
+* Laravel User Verification
+https://github.com/jrean/laravel-user-verification
 
 ## Installation
 
