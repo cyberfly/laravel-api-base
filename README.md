@@ -10,6 +10,7 @@ Laravel API Base allows you to jump start your API development quickly, without 
   https://laravel-base-api.test/admin/oauth
 * API documentation with Swagger UI, integrated with Laravel Passport
   https://laravel-base-api.test/api/documentation
+* Sample API and api routes integrated using Dingo API  
 * LogViewer
 https://laravel-base-api.test/admin/logviewer
 * All HTTP request data automatically log using Spatie HTTP Logger and can be view from LogViewer
@@ -21,6 +22,8 @@ https://laravel-base-api.test/admin/logviewer
 https://laravel.com/docs/5.6/passport
 * Laravel Swagger
 https://github.com/DarkaOnLine/L5-Swagger
+* Dingo API 
+https://github.com/dingo/api
 * GuzzleHTTP
 https://github.com/guzzle/guzzle
 * Laravel CORS
