@@ -23,6 +23,6 @@ Route::get('/home', 'HomeController@index')->name('home');
  * Manage Oauth Clients and Personal Access Tokens
  * */
 
-Route::get('/admin/oauth', function () {
-    return view('admin.oauth.index');
+Route::get('/admin/passport', function () {
+    return view('admin.passport.index');
 })->middleware('auth');

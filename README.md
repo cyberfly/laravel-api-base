@@ -7,7 +7,7 @@ Laravel API Base allows you to jump start your API development quickly, without 
 ## Features
 
 * Manage Laravel Passport clients page
-  https://laravel-base-api.test/admin/oauth
+  https://laravel-base-api.test/admin/passport
 * API documentation with Swagger UI, integrated with Laravel Passport
   https://laravel-base-api.test/api/documentation
 * Sample API and api routes integrated using Dingo API  
