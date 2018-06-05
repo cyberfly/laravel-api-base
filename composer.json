@@ -9,6 +9,7 @@
         "arcanedev/log-viewer": "^4.5",
         "barryvdh/laravel-cors": "^0.11.0",
         "darkaonline/l5-swagger": "5.6.*",
+        "dingo/api": "2.0.0-alpha1",
         "fideloper/proxy": "^4.0",
         "guzzlehttp/guzzle": "^6.3",
         "jrean/laravel-user-verification": "^6.0",
@@ -16,7 +17,7 @@
         "laravel/passport": "^6.0",
         "laravel/tinker": "^1.0",
         "spatie/laravel-http-logger": "^1.1",
-        "dingo/api": "2.0.0-alpha1"
+        "spatie/laravel-permission": "^2.12"
     },
     "require-dev": {
         "filp/whoops": "^2.0",
