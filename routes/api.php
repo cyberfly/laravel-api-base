@@ -29,5 +29,13 @@ $api->version('v1', function ($api) {
 
         $api->get('test', 'SampleApiController@index');
 
+        //users routes
+
+        $api->get('users', 'UserController@index');
+        $api->post('users', 'UserController@store');
+        $api->get('users/{user_id}', 'UserController@show');
+        $api->put('users/{user_id}', 'UserController@update');
+        $api->delete('users/{user_id}', 'UserController@destroy');
+
     });
 });
