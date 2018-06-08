@@ -1,11 +1,14 @@
 # Laravel API Base
 
+### Warning! This API base will save you countless days of hard work. Please a donate a smile to your friend. 
+
 ## About
 
-Laravel API Base allows you to jump start your API development quickly, without time consuming installation and setup proces.
+Laravel API Base allows you to jump start your API development quickly, without time consuming installation and setup proces. Filled with best practice and will be maintained.
 
 ## Features
 
+* Ready with administrator user, role and permission. Powered by Spatie Laravel Permission
 * Manage Laravel Passport clients page
   https://laravel-base-api.test/admin/passport
 * API documentation with Swagger UI, integrated with Laravel Passport
@@ -36,6 +39,8 @@ https://github.com/spatie/laravel-http-logger
 https://github.com/ARCANEDEV/LogViewer
 * Laravel User Verification
 https://github.com/jrean/laravel-user-verification
+* Spatie Laravel Permission
+https://github.com/spatie/laravel-permission
 
 ## Installation
 
@@ -45,7 +50,13 @@ https://github.com/jrean/laravel-user-verification
 * update your database config at .env file
 * copy specific config from .env.example into .env file
 * php artisan migrate
+* php artisan db:seed
+* Login with username : **admin@admin@laravelapibase.test** and password **admin123**
 * enjoy!
+
+## Access
+
+* Login with username : **admin@admin@laravelapibase.test** and password **admin123**
 
 ## How to
 
@@ -97,8 +108,6 @@ class UserFilters extends QueryFilters
 
 ## TODO
 
-* Spatie Laravel Permission
-https://github.com/spatie/laravel-permission
 * Spatie Laravel Medialibrary
 https://github.com/spatie/laravel-medialibrary
 * Spatie Laravel Sluggable
