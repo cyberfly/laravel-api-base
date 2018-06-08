@@ -108,6 +108,10 @@ class UserFilters extends QueryFilters
 
 ## TODO
 
+* Authentication API
+* User API
+* Role API
+* Permission API
 * Spatie Laravel Medialibrary
 https://github.com/spatie/laravel-medialibrary
 * Spatie Laravel Sluggable
