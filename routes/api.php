@@ -45,5 +45,13 @@ $api->version('v1', function ($api) {
         $api->put('roles/{role_id}', 'RoleController@update');
         $api->delete('roles/{role_id}', 'RoleController@destroy');
 
+        //permissions routes
+
+        $api->get('permissions', 'PermissionController@index');
+        $api->post('permissions', 'PermissionController@store');
+        $api->get('permissions/{permission_id}', 'PermissionController@show');
+        $api->put('permissions/{permission_id}', 'PermissionController@update');
+        $api->delete('permissions/{permission_id}', 'PermissionController@destroy');
+
     });
 });
