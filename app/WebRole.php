@@ -6,6 +6,7 @@ use App\Traits\Filterable;
 use App\Traits\HasParentModel;
 use App\Traits\Resultable;
 use App\Traits\SpatiePermission;
+use App\Traits\WebGuardScope;
 use Spatie\Permission\Models\Role as SpatieRoleModel;
 
 class WebRole extends SpatieRoleModel
@@ -14,6 +15,7 @@ class WebRole extends SpatieRoleModel
     use SpatiePermission;
     use Filterable;
     use Resultable;
+    use WebGuardScope;
 
     protected $table = 'roles';
     protected $guard_name = 'web';

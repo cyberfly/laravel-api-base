@@ -6,6 +6,7 @@ use App\Traits\Filterable;
 use App\Traits\HasParentModel;
 use App\Traits\Resultable;
 use App\Traits\SpatiePermission;
+use App\Traits\WebGuardScope;
 use Spatie\Permission\Models\Permission as SpatiePermissionModel;
 
 class WebPermission extends SpatiePermissionModel
@@ -14,6 +15,7 @@ class WebPermission extends SpatiePermissionModel
     use SpatiePermission;
     use Filterable;
     use Resultable;
+    use WebGuardScope;
 
     protected $table = 'permissions';
     protected $guard_name = 'web';

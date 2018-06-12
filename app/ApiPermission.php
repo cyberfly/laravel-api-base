@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Traits\ApiGuardScope;
 use App\Traits\Filterable;
 use App\Traits\HasParentModel;
 use App\Traits\Resultable;
@@ -14,6 +15,7 @@ class ApiPermission extends SpatiePermissionModel
     use SpatiePermission;
     use Filterable;
     use Resultable;
+    use ApiGuardScope;
 
     protected $table = 'permissions';
     protected $guard_name = 'api';
