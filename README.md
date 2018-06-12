@@ -1,6 +1,6 @@
 # Laravel API Base
 
-### Warning! This API base will save you countless days of hard work. Please a donate a smile to your friend. 
+### Warning! This API base will save you countless days of hard work. Please donate a smile to your friend. 
 
 ## About
 
@@ -8,6 +8,7 @@ Laravel API Base allows you to jump start your API development quickly, without 
 
 ## Features
 
+* Ready made API for Users, Roles and Permissions
 * Ready with administrator user, role and permission. Powered by Spatie Laravel Permission
 * Manage Laravel Passport clients page
   https://laravel-base-api.test/admin/passport
@@ -57,6 +58,77 @@ https://github.com/spatie/laravel-permission
 ## Access
 
 * Login with username : **admin@laravelapibase.test** and password **admin123**
+
+## API
+
+#####Users API
+```
+List of Users
+GET 
+https://laravel-api-base.test/api/v1/users
+--
+Show single user
+GET
+https://laravel-api-base.test/api/v1/users/1
+--
+Create user
+POST
+https://laravel-api-base.test/api/v1/users
+--
+Update user
+PUT
+https://laravel-api-base.test/api/v1/users/1
+--
+Delete user
+DELETE
+https://laravel-api-base.test/api/v1/users/1
+```
+
+#####Roles API
+```
+List of Roles
+GET 
+https://laravel-api-base.test/api/v1/roles
+--
+Show single role
+GET
+https://laravel-api-base.test/api/v1/roles/1
+--
+Create role
+POST
+https://laravel-api-base.test/api/v1/roles
+--
+Update role
+PUT
+https://laravel-api-base.test/api/v1/roles/1
+--
+Delete role
+DELETE
+https://laravel-api-base.test/api/v1/roles/1
+```
+
+#####Permissions API
+```
+List of Permissions
+GET 
+https://laravel-api-base.test/api/v1/permissions
+--
+Show single permission
+GET
+https://laravel-api-base.test/api/v1/permissions/1
+--
+Create permission
+POST
+https://laravel-api-base.test/api/v1/permissions
+--
+Update permission
+PUT
+https://laravel-api-base.test/api/v1/permissions/1
+--
+Delete permission
+DELETE
+https://laravel-api-base.test/api/v1/permissions/1
+```
 
 ## How to
 
@@ -109,9 +181,9 @@ class UserFilters extends QueryFilters
 ## TODO
 
 * Authentication API
-* User API
-* Role API
-* Permission API
+* ~~User API~~
+* ~~Role API~~
+* ~~Permission API~~
 * Spatie Laravel Medialibrary
 https://github.com/spatie/laravel-medialibrary
 * Spatie Laravel Sluggable
