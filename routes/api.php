@@ -37,5 +37,13 @@ $api->version('v1', function ($api) {
         $api->put('users/{user_id}', 'UserController@update');
         $api->delete('users/{user_id}', 'UserController@destroy');
 
+        //roles routes
+
+        $api->get('roles', 'RoleController@index');
+        $api->post('roles', 'RoleController@store');
+        $api->get('roles/{role_id}', 'RoleController@show');
+        $api->put('roles/{role_id}', 'RoleController@update');
+        $api->delete('roles/{role_id}', 'RoleController@destroy');
+
     });
 });
