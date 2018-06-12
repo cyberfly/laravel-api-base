@@ -61,7 +61,7 @@ https://github.com/spatie/laravel-permission
 
 ## API
 
-#####Users API
+##### Users API
 ```
 List of Users
 GET 
@@ -84,7 +84,7 @@ DELETE
 https://laravel-api-base.test/api/v1/users/1
 ```
 
-#####Roles API
+##### Roles API
 ```
 List of Roles
 GET 
@@ -107,7 +107,7 @@ DELETE
 https://laravel-api-base.test/api/v1/roles/1
 ```
 
-#####Permissions API
+##### Permissions API
 ```
 List of Permissions
 GET 
