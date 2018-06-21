@@ -47,6 +47,7 @@ https://github.com/spatie/laravel-permission
 
 * git clone git@srv.nazrol.tech:internal/laravel-api-base.git
 * composer install
+* cp .env.example .env
 * php artisan key:generate
 * update your database config at .env file
 * copy specific config from .env.example into .env file
