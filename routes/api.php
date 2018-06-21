@@ -42,29 +42,35 @@ $api->version('v1', function ($api) {
             $api->get('me', 'AuthController@me');
         });
 
-        //users routes
+        $api->group(['middleware' => 'auth:api'], function($api) {
 
-        $api->get('users', 'UserController@index');
-        $api->post('users', 'UserController@store');
-        $api->get('users/{user_id}', 'UserController@show');
-        $api->put('users/{user_id}', 'UserController@update');
-        $api->delete('users/{user_id}', 'UserController@destroy');
+            //users routes
 
-        //roles routes
+            $api->get('users', 'UserController@index');
+            $api->post('users', 'UserController@store');
+            $api->get('users/{user_id}', 'UserController@show');
+            $api->put('users/{user_id}', 'UserController@update');
+            $api->delete('users/{user_id}', 'UserController@destroy');
 
-        $api->get('roles', 'RoleController@index');
-        $api->post('roles', 'RoleController@store');
-        $api->get('roles/{role_id}', 'RoleController@show');
-        $api->put('roles/{role_id}', 'RoleController@update');
-        $api->delete('roles/{role_id}', 'RoleController@destroy');
+            //roles routes
 
-        //permissions routes
+            $api->get('roles', 'RoleController@index');
+            $api->post('roles', 'RoleController@store');
+            $api->get('roles/{role_id}', 'RoleController@show');
+            $api->put('roles/{role_id}', 'RoleController@update');
+            $api->delete('roles/{role_id}', 'RoleController@destroy');
 
-        $api->get('permissions', 'PermissionController@index');
-        $api->post('permissions', 'PermissionController@store');
-        $api->get('permissions/{permission_id}', 'PermissionController@show');
-        $api->put('permissions/{permission_id}', 'PermissionController@update');
-        $api->delete('permissions/{permission_id}', 'PermissionController@destroy');
+            //permissions routes
+
+            $api->get('permissions', 'PermissionController@index');
+            $api->post('permissions', 'PermissionController@store');
+            $api->get('permissions/{permission_id}', 'PermissionController@show');
+            $api->put('permissions/{permission_id}', 'PermissionController@update');
+            $api->delete('permissions/{permission_id}', 'PermissionController@destroy');
+
+        });
+
+
 
     });
 });
