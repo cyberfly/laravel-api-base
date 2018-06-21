@@ -31,7 +31,7 @@ $api->version('v1', function ($api) {
 
         //auth routes
 
-        $api->post('login', 'AuthController@login');
+        $api->post('login', 'AuthController@passwordGrantLogin');
 
         $api->group(['middleware' => 'auth:api'], function($api) {
 
