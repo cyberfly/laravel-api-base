@@ -10,9 +10,11 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends ApiController
 {
+    public $user_relationships;
+
     public function __construct()
     {
-
+        $this->user_relationships = ['roles'];
     }
 
     public function login(Request $request)
@@ -42,7 +44,8 @@ class AuthController extends ApiController
 
     public function me()
     {
-
+        $user = $this->guard()->user();
+        return new AuthUserResource($user->load($this->user_relationships));
     }
 
     public function refresh()

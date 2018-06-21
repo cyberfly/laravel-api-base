@@ -33,6 +33,10 @@ $api->version('v1', function ($api) {
 
         $api->post('login', 'AuthController@login');
 
+        $api->group(['middleware' => 'auth:api'], function($api) {
+            $api->get('me', 'AuthController@me');
+        });
+
         //users routes
 
         $api->get('users', 'UserController@index');
