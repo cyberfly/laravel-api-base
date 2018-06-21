@@ -63,6 +63,24 @@ https://github.com/spatie/laravel-permission
 
 ## API
 
+##### Authentication API
+```
+Login
+POST
+Params (email, password)
+https://laravel-api-base.test/api/v1/login
+--
+Authenticated User Info / Validate token
+GET
+Headers (Authorization : Bearer token)
+https://laravel-api-base.test/api/v1/me
+--
+Logout current authenticated user
+POST
+Headers (Authorization : Bearer token)
+https://laravel-api-base.test/api/v1/logout
+```
+
 ##### Users API
 ```
 List of Users
