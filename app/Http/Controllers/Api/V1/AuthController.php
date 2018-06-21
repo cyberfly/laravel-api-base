@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api\V1;
 
 
 use App\Http\Resources\Api\V1\AuthUserResource;
+use App\Services\AuthService;
+use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -11,11 +13,34 @@ use Illuminate\Support\Facades\Auth;
 class AuthController extends ApiController
 {
     public $user_relationships;
+    public $authService;
 
-    public function __construct()
+    public function __construct(AuthService $authService)
     {
+        $this->authService = $authService;
         $this->user_relationships = ['roles'];
     }
+
+    //login with password grant, return short live token and refresh token
+
+    public function passwordGrantLogin(Request $request)
+    {
+        $result = $this->authService->attemptLogin($request->email, $request->password);
+
+        if (!$result) {
+            return response()->json(['status' => 'error', 'message' => 'Invalid credentials!'], 401);
+        }
+
+        $user = User::whereEmail($request->email)->first();
+
+        $logged_in_time = Carbon::now();
+
+        $additional_info = $result + ['logged_in_time' => $logged_in_time];
+
+        return (new AuthUserResource($user->load('roles')))->additional($additional_info);
+    }
+
+    //login with personal access client, return long live token, no refresh token
 
     public function login(Request $request)
     {
