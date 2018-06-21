@@ -18,7 +18,7 @@ class ApiRole extends SpatieRoleModel
     use ApiGuardScope;
 
     protected $table = 'roles';
-    protected $guard_name = 'api';
+    protected static $guard_name = 'api';
     protected $primaryKey = 'id';
 
     protected $fillable = [

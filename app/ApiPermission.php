@@ -18,7 +18,7 @@ class ApiPermission extends SpatiePermissionModel
     use ApiGuardScope;
 
     protected $table = 'permissions';
-    protected $guard_name = 'api';
+    protected static $guard_name = 'api';
     protected $primaryKey = 'id';
 
     protected $fillable = [

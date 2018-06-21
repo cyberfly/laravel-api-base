@@ -18,7 +18,7 @@ class WebPermission extends SpatiePermissionModel
     use WebGuardScope;
 
     protected $table = 'permissions';
-    protected $guard_name = 'web';
+    protected static $guard_name = 'web';
     protected $primaryKey = 'id';
 
     protected $fillable = [

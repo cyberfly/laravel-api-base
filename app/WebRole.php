@@ -18,7 +18,7 @@ class WebRole extends SpatieRoleModel
     use WebGuardScope;
 
     protected $table = 'roles';
-    protected $guard_name = 'web';
+    protected static $guard_name = 'web';
     protected $primaryKey = 'id';
 
     protected $fillable = [
