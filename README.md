@@ -52,7 +52,8 @@ https://github.com/spatie/laravel-permission
 * copy specific config from .env.example into .env file
 * php artisan migrate
 * php artisan db:seed
-* php artisan passport:install
+* php artisan passport:install (Copy the client ID and client secret, update .env PASSWORDGRANT_CLIENT_ID and PASSWORDGRANT_CLIENT_SECRET)
+* php artisan config:clear
 * Login with username : **admin@laravelapibase.test** and password **admin123**
 * enjoy!
 
