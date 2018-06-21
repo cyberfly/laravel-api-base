@@ -7,7 +7,7 @@ trait ApiGuardScope
     public static function bootApiGuardScope()
     {
         static::addGlobalScope(function ($query) {
-            $query->where('guard_name', 'api');
+            $query->where('guard_name', self::$guard_name);
         });
     }
 }

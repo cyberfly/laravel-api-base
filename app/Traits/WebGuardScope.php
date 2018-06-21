@@ -7,7 +7,7 @@ trait WebGuardScope
     public static function bootWebGuardScope()
     {
         static::addGlobalScope(function ($query) {
-            $query->where('guard_name', 'web');
+            $query->where('guard_name', self::$guard_name);
         });
     }
 }
