@@ -51,10 +51,32 @@ class AuthService
     /**
      * Attempt to refresh the access token used a refresh token that
      * has been saved in a cookie
+     * @param $token
+     * @return bool|mixed|\Psr\Http\Message\ResponseInterface
      */
-    public function attemptRefresh()
+    public function attemptRefresh($token)
     {
+        $http = new Client;
 
+        try {
+            $response = $http->post(url('/') . '/oauth/token', [
+                'form_params' => [
+                    'grant_type' => 'refresh_token',
+                    'refresh_token' => $token,
+                    'client_id' => $this->client_id,
+                    'client_secret' => $this->client_secret,
+                    'scope' => '',
+                ],
+            ]);
+
+            $response = json_decode((string)$response->getBody(), true);
+
+            return $response;
+
+        } catch (\Exception $exception) {
+            report($exception);
+            return false;
+        }
     }
 
 

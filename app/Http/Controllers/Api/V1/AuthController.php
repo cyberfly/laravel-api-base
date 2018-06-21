@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api\V1;
 
 
 use App\Http\Resources\Api\V1\AuthUserResource;
+use App\Http\Resources\Api\V1\TokenResource;
 use App\Services\AuthService;
 use App\User;
 use Carbon\Carbon;
@@ -75,9 +76,19 @@ class AuthController extends ApiController
         return new AuthUserResource($user->load($this->user_relationships));
     }
 
-    public function refresh()
-    {
+    //refresh access token
 
+    public function refresh(Request $request)
+    {
+        $this->validate($request, ['refresh_token' => 'required']);
+
+        $result = $this->authService->attemptRefresh($request->refresh_token);
+
+        if (!$result) {
+            return response()->json(['status' => 'error', 'message' => 'Invalid token!'], 401);
+        }
+
+        return $result;
     }
 
     /**

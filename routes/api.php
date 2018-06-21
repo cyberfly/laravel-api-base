@@ -35,6 +35,9 @@ $api->version('v1', function ($api) {
 
         $api->group(['middleware' => 'auth:api'], function($api) {
 
+            //refresh access token
+            $api->post('refreshtoken', 'AuthController@refresh');
+
             //log out
             $api->post('logout', 'AuthController@logout');
 
