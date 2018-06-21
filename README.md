@@ -71,10 +71,16 @@ POST
 Params (email, password)
 https://laravel-api-base.test/api/v1/login
 --
-Authenticated User Info / Validate token
+Get Authenticated User Info / Validate token
 GET
 Headers (Authorization : Bearer token)
 https://laravel-api-base.test/api/v1/me
+--
+Refresh Access Token
+POST
+Headers (Authorization : Bearer token)
+Params (refresh_token)
+https://laravel-api-base.test/api/v1/refreshtoken
 --
 Logout current authenticated user
 POST
