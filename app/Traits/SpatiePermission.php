@@ -6,8 +6,8 @@ trait SpatiePermission
 {
     //find permission / role exist for specific guard
 
-    public function scopeFirstByName($query, $name)
+    public static function firstByName($name)
     {
-        return $query->whereName($name)->whereGuardName($this->guard_name)->first();
+        return (new static)::whereName($name)->whereGuardName(self::$guard_name)->first();
     }
 }
