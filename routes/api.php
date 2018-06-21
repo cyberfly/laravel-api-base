@@ -34,6 +34,11 @@ $api->version('v1', function ($api) {
         $api->post('login', 'AuthController@login');
 
         $api->group(['middleware' => 'auth:api'], function($api) {
+
+            //log out
+            $api->post('logout', 'AuthController@logout');
+
+            //get current logged in user info by token
             $api->get('me', 'AuthController@me');
         });
 

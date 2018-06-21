@@ -37,9 +37,11 @@ class AuthController extends ApiController
         return (new AuthUserResource($user->load('roles')))->additional(['token' => $token, 'logged_in_time' => $logged_in_time]);
     }
 
-    public function logout()
+    public function logout(Request $request)
     {
+        $request->user()->token()->revoke();
 
+        return response()->json(['message' => 'Successfully logged out']);
     }
 
     public function me()
