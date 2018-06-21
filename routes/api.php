@@ -29,6 +29,10 @@ $api->version('v1', function ($api) {
 
         $api->get('test', 'SampleApiController@index');
 
+        //auth routes
+
+        $api->post('login', 'AuthController@login');
+
         //users routes
 
         $api->get('users', 'UserController@index');
