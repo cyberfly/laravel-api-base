@@ -41,7 +41,7 @@ class RoleSeeder extends Seeder
 
                         if ($role_guard=='api') {
 
-                            $role = ApiRole::findByName($role_name);
+                            $role = ApiRole::firstByName($role_name);
 
                             if (!$role) {
                                 $role = ApiRole::create($role->except('guards')->all());
@@ -49,7 +49,7 @@ class RoleSeeder extends Seeder
                         }
                         else if ($role_guard=='web') {
 
-                            $role = WebRole::findByName($role_name);
+                            $role = WebRole::firstByName($role_name);
 
                             if (!$role) {
                                 $role = WebRole::create($role->except('guards')->all());
