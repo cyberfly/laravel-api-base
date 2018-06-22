@@ -8,6 +8,7 @@ Laravel API Base allows you to jump start your API development quickly, without 
 
 ## Features
 
+* Ready made Authentication API (Login, Logout, Me, Refresh Token)
 * Ready made API for Users, Roles and Permissions
 * Ready with administrator user, role and permission. Powered by Spatie Laravel Permission
 * Manage Laravel Passport clients page
@@ -42,6 +43,8 @@ https://github.com/ARCANEDEV/LogViewer
 https://github.com/jrean/laravel-user-verification
 * Spatie Laravel Permission
 https://github.com/spatie/laravel-permission
+* Clockwork debug
+https://underground.works/clockwork/
 
 ## Installation
 
@@ -208,7 +211,7 @@ class UserFilters extends QueryFilters
 
 ## TODO
 
-* Authentication API
+* ~~Authentication API~~
 * ~~User API~~
 * ~~Role API~~
 * ~~Permission API~~
