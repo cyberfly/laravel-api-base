@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Http\Resources\RequestQueryFilter;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +24,12 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        /*
+         * Register load method that binds to Eloquent resource
+         * */
+
+        $this->app->singleton('load', function($app) {
+            return new RequestQueryFilter;
+        });
     }
 }
